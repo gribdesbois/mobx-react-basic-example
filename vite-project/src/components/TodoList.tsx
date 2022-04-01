@@ -1,7 +1,7 @@
 import { makeObservable, observable, computed } from 'mobx'
 import ITodo from '../types/ITodo'
 
-class TodoList {
+export class TodoList {
   todos: ITodo[] = []
 
   get unfinishedTodoCount() {
