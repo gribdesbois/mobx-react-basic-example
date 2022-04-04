@@ -1,24 +1,24 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import todoStore from './stores/TodoStore'
+import todoStore from './stores/ObservableTodoStore'
 
 function App() {
   const [count, setCount] = useState(0)
   todoStore.addTodo('read Mobx tutorial')
-  console.log(todoStore.report())
+  console.log(todoStore.report)
 
   todoStore.addTodo('try Mobx')
-  console.log(todoStore.report())
+  console.log(todoStore.report)
 
   todoStore.todos[0].completed = true
-  console.log(todoStore.report())
+  console.log(todoStore.report)
 
   todoStore.todos[1].task = 'try Mobx in own project'
-  console.log(todoStore.report())
+  console.log(todoStore.report)
 
   todoStore.todos[0].task = 'grok Mobx tutorial'
-  console.log(todoStore.report())
+  console.log(todoStore.report)
 
   return (
     <div className="App">
